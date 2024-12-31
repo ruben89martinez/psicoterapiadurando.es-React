@@ -1,0 +1,82 @@
+/* Estilos para el Header */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #ffffff;
+  color: #333333;
+}
+.icon-image {
+  font-size: 1.5rem; /* Tamaño del ícono */
+  color: #e1306c; /* Color oficial de Instagram */
+  transition: transform 0.3s ease;
+}
+
+.icon-image:hover {
+  transform: scale(1.1);
+}
+
+.header-logo .logo-image {
+  max-height: 50px;
+}
+
+.header-menu .menu-list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header-menu .menu-item a {
+  text-decoration: none;
+  color: #333333;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.header-menu .menu-item a:hover {
+  color: #1abc9c;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center; /* Alineación vertical */
+  gap: 10px; /* Espaciado entre los elementos */
+}
+
+.header-icons .icon-image {
+  max-height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.header-icons .icon-image:hover {
+  transform: scale(1.1);
+}
+
+.hero-button {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.btn {
+  background-color: #007bff; /* Color azul */
+  color: white;
+  padding: 0.8rem 1.5rem; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 1rem; /* Tamaño de fuente */
+  font-weight: bold; /* Negrita */
+  text-decoration: none; /* Quitar subrayado */
+  border: 2px solid transparent; /* Borde inicial transparente */
+  cursor: pointer; /* Cursor de mano */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Transición suave */
+}
+
+.btn:hover {
+  background-color: white; /* Fondo blanco al pasar el ratón */
+  color: #007bff; /* Texto azul al pasar el ratón */
+  border-color: #007bff; /* Cambiar el color del borde sin afectar el tamaño */
+}
+

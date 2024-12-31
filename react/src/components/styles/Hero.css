@@ -1,0 +1,54 @@
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Para posicionar el texto a la derecha */
+  position: relative;
+  background: url('/images/despacho-2.JPG');
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 2rem;
+}
+
+.hero-content {
+  max-width: 50%; /* El texto ocupa la mitad derecha del espacio */
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+  padding: 3rem;
+  border-radius: 10px;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  margin-top: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero-button {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.hero .btn {
+  background-color: #007bff;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.hero .btn:hover {
+  background-color: white;
+  color: #007bff;
+}

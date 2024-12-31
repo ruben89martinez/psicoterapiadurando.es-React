@@ -1,0 +1,68 @@
+/* Estilos generales */
+.features-section {
+    background-color: #f8f9fa; /* Fondo claro */
+    padding: 60px 20px;
+  }
+  
+  .features-section h2 {
+    font-size: 2.5rem;
+    color: #4a5568; /* Gris azulado */
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+  .features-section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #6b7280; /* Gris intermedio */
+    margin-bottom: 20px;
+  }
+  
+  /* Imagen con bordes suaves */
+  .features-section img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+  }
+  
+  /* Fondo completo para la segunda parte */
+  .full-width-section {
+    width: 100%;
+    background-color: rgba(74, 85, 104, 0.1); /* Fondo con opacidad baja */
+    padding: 50px 20px;
+  }
+  
+  .extended-text {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .extended-text p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #4a4a4a; /* Gris oscuro */
+    margin-bottom: 15px;
+  }
+  
+  /* Cursiva para frases destacadas */
+  .extended-text em {
+    font-style: italic;
+    color: #4a5568; /* Gris azulado */
+  }
+  
+  /* Responsive */
+  @media (min-width: 768px) {
+    .features-section .row {
+      display: flex;
+      align-items: center;
+    }
+  
+    .features-section .col-md-6 {
+      flex: 1;
+      padding: 20px;
+    }
+  }
+  

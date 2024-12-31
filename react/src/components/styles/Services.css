@@ -1,0 +1,82 @@
+/* Contenedor principal */
+.services-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Título */
+.services-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Contenedor de columnas */
+.services-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Cada columna */
+.services-column {
+  flex: 1;
+  text-align: center;
+  min-width: 250px;
+  border: 1px solid #ccc; /* Borde para diferenciar */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 10px;
+  background-color: #f9f9f9; /* Fondo claro para destacar */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Imagen de servicio */
+.service-image {
+  width: 100%; /* Ajusta la imagen al ancho de la columna */
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 6px; /* Bordes redondeados */
+  object-fit: cover; /* Ajusta la imagen para mantener proporción */
+}
+
+/* Botón del acordeón */
+.accordion-button {
+  width: 100%;
+  padding: 8px 16px; /* Tamaño más discreto */
+  text-align: center;
+  font-size: 16px;
+  font-weight: normal;
+  color: #ffffff;
+  background-color: #007bff; /* Azul base */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.accordion-button:hover {
+  background-color: #0056b3; /* Azul más oscuro en hover */
+  transform: scale(1.02); /* Ligero efecto de agrandamiento */
+}
+
+.accordion-button.active {
+  background-color: #28a745; /* Verde para estado activo */
+}
+
+/* Contenido desplegable */
+.accordion-content {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.accordion-content p {
+  margin: 0 0 10px;
+  color: #555;
+  line-height: 1.6;
+}

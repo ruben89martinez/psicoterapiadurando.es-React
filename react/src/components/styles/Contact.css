@@ -1,0 +1,89 @@
+/* Contenedor principal con diseño de dos columnas */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+  gap: 20px;
+  align-items: start; /* Alinear contenido al inicio verticalmente */
+  padding: 20px;
+  min-height: 100vh; /* Altura mínima para ocupar toda la pantalla */
+}
+
+/* Columnas individuales */
+.contact-column {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+/* Estilo para la columna del formulario */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Alinear al inicio */
+  align-items: center; /* Centrar el contenido horizontalmente */
+}
+
+.form-title {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Estilo para el formulario */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px; /* Limitar el ancho del formulario */
+}
+
+.contact-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.contact-form textarea {
+  height: 100px;
+  resize: vertical; /* Permitir redimensionar verticalmente */
+}
+
+.contact-form button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Estilo para la columna del calendario */
+.contact-calendar {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar el título y el calendario */
+}
+
+.calendar-title {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Estilo para el calendario */
+.contact-calendar .zl-url {
+  width: 100%; /* Asegurar que el calendario use el espacio disponible */
+  max-width: 800px; /* Limitar el tamaño máximo del calendario */
+}
