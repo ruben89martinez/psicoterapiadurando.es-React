@@ -1,16 +1,24 @@
-/* Contenedor principal */
+/* Contenedor principal del componente */
 .services-container {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px 20px;
+  background-color: #f7f9fc;
+  /* Color de fondo suave */
+  border-radius: 8px;
+  /* Bordes redondeados para un diseño moderno */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  /* Sombra para darle profundidad */
 }
 
-/* Título */
+/* Título del componente */
 .services-title {
   text-align: center;
-  margin-bottom: 20px;
-  font-size: 24px;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: bold;
   color: #333;
+  /* Color del texto */
 }
 
 /* Contenedor de columnas */
@@ -19,60 +27,72 @@
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
+  /* Para ajustar columnas en pantallas pequeñas */
 }
 
 /* Cada columna */
 .services-column {
   flex: 1;
-  text-align: center;
   min-width: 250px;
-  border: 1px solid #ccc; /* Borde para diferenciar */
-  border-radius: 8px; /* Bordes redondeados */
-  padding: 10px;
-  background-color: #f9f9f9; /* Fondo claro para destacar */
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  text-align: center;
+  border: 1px solid #ddd;
+  /* Borde para diferenciar cada columna */
+  border-radius: 8px;
+  background-color: #ffffff;
+  /* Fondo blanco para contraste */
+  padding: 20px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Efecto hover en las columnas */
+.services-column:hover {
+  transform: scale(1.02);
+  /* Pequeño efecto de agrandamiento */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+  /* Sombra al pasar el cursor */
 }
 
 /* Imagen de servicio */
 .service-image {
-  width: 100%; /* Ajusta la imagen al ancho de la columna */
+  width: 100%;
+  max-width: 200px;
   height: auto;
-  margin-bottom: 10px;
-  border-radius: 6px; /* Bordes redondeados */
-  object-fit: cover; /* Ajusta la imagen para mantener proporción */
+  margin: 0 auto 15px;
+  border-radius: 6px;
 }
 
 /* Botón del acordeón */
 .accordion-button {
   width: 100%;
-  padding: 8px 16px; /* Tamaño más discreto */
-  text-align: center;
+  padding: 10px 20px;
   font-size: 16px;
-  font-weight: normal;
+  font-weight: bold;
   color: #ffffff;
-  background-color: #007bff; /* Azul base */
+  background-color: #007bff;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.1s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .accordion-button:hover {
-  background-color: #0056b3; /* Azul más oscuro en hover */
-  transform: scale(1.02); /* Ligero efecto de agrandamiento */
+  background-color: #0056b3;
+  transform: scale(1.03);
 }
 
 .accordion-button.active {
-  background-color: #28a745; /* Verde para estado activo */
+  background-color: #28a745;
+  /* Verde para estado activo */
 }
 
 /* Contenido desplegable */
 .accordion-content {
   margin-top: 20px;
-  padding: 15px;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
   border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .accordion-content p {
