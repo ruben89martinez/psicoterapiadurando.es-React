@@ -4,11 +4,10 @@
   margin: 0 auto;
   padding: 40px 20px;
   background-color: #f7f9fc;
-  /* Color de fondo suave */
+  /* Fondo suave */
   border-radius: 8px;
-  /* Bordes redondeados para un diseño moderno */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  /* Sombra para darle profundidad */
+  /* Sombra ligera */
 }
 
 /* Título del componente */
@@ -18,7 +17,6 @@
   font-size: 28px;
   font-weight: bold;
   color: #333;
-  /* Color del texto */
 }
 
 /* Contenedor de columnas */
@@ -27,7 +25,7 @@
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
-  /* Para ajustar columnas en pantallas pequeñas */
+  /* Permite ajustar columnas en pantallas pequeñas */
 }
 
 /* Cada columna */
@@ -36,20 +34,20 @@
   min-width: 250px;
   text-align: center;
   border: 1px solid #ddd;
-  /* Borde para diferenciar cada columna */
+  /* Borde de cada columna */
   border-radius: 8px;
   background-color: #ffffff;
-  /* Fondo blanco para contraste */
+  /* Fondo blanco */
   padding: 20px;
+  position: relative;
+  /* Necesario para posicionar contenido desplegable en móvil */
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-/* Efecto hover en las columnas */
 .services-column:hover {
   transform: scale(1.02);
-  /* Pequeño efecto de agrandamiento */
+  /* Efecto de agrandamiento */
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
-  /* Sombra al pasar el cursor */
 }
 
 /* Imagen de servicio */
@@ -82,7 +80,6 @@
 
 .accordion-button.active {
   background-color: #28a745;
-  /* Verde para estado activo */
 }
 
 /* Contenido desplegable */
@@ -93,10 +90,32 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  display: none;
+  /* Oculto por defecto */
 }
 
-.accordion-content p {
-  margin: 0 0 10px;
-  color: #555;
-  line-height: 1.6;
+.services-column.active .accordion-content {
+  display: block;
+  /* Se muestra solo cuando la columna está activa */
+}
+
+/* Estilo móvil */
+@media (max-width: 768px) {
+  .services-columns {
+    flex-direction: column;
+    /* Las columnas se apilan verticalmente en móvil */
+  }
+
+  .services-column {
+    margin-bottom: 20px;
+    /* Espacio entre columnas */
+  }
+
+  .accordion-content {
+    position: static;
+    /* Evita superposición, aparece debajo de cada columna */
+    margin-top: 10px;
+    width: 100%;
+    /* Asegura que ocupe todo el ancho de la columna */
+  }
 }

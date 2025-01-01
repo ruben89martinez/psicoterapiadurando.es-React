@@ -1,82 +1,91 @@
-/* Estilos para el Header */
+/* General del header */
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-  background-color: #ffffff;
-  color: #333333;
+  padding: 0.5rem 2rem;
+  background-color: white;
+  /* Fondo blanco */
+  color: #333;
+  /* Texto oscuro */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Sombra ligera */
 }
+
+.header-logo img {
+  height: 50px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Menú de navegación */
+.header-menu {
+  display: flex;
+  /* Flexbox para alineación horizontal */
+  justify-content: center;
+  /* Centrar el menú horizontalmente */
+  list-style: none;
+  /* Quitar los puntos de lista */
+  margin: 0;
+  /* Quitar márgenes */
+  padding: 0 1rem;
+  /* Añadir relleno lateral */
+  font-family: 'Montserrat', sans-serif;
+  /* Aplicar la fuente Montserrat */
+  flex: 1;
+  /* Permitir que el menú ocupe el espacio restante */
+}
+
+.menu-item {
+  display: inline-block;
+  /* Garantizar que cada elemento sea inline */
+  padding: 0 1rem;
+  /* Espaciado entre los nombres del menú */
+}
+
+.menu-item a {
+  text-decoration: none;
+  /* Quitar subrayado */
+  color: #333;
+  /* Color del texto */
+  font-size: 1.2rem;
+  /* Tamaño de fuente */
+  font-weight: bold;
+  /* Negrita */
+  font-family: 'Montserrat', sans-serif;
+  /* Aplicar la fuente Montserrat */
+}
+
+.menu-item a:hover {
+  color: #007bff;
+  /* Color azul al pasar el ratón */
+}
+
+/* Íconos */
+.header-icons {
+  display: flex;
+  align-items: center;
+  /* Centrar iconos verticalmente */
+  gap: 1.5rem;
+  /* Más espaciado entre iconos */
+  padding: 0 3rem;
+  /* Añadir padding a la derecha */
+  margin-left: auto;
+  /* Empujar los iconos hacia la derecha */
+}
+
 .icon-image {
-  font-size: 1.5rem; /* Tamaño del ícono */
-  color: #e1306c; /* Color oficial de Instagram */
-  transition: transform 0.3s ease;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
 }
 
 .icon-image:hover {
   transform: scale(1.1);
+  /* Pequeño zoom al pasar el ratón */
 }
-
-.header-logo .logo-image {
-  max-height: 50px;
-}
-
-.header-menu .menu-list {
-  display: flex;
-  gap: 30px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.header-menu .menu-item a {
-  text-decoration: none;
-  color: #333333;
-  font-size: 18px;
-  font-family: 'Montserrat', sans-serif;
-  transition: color 0.3s ease;
-}
-
-.header-menu .menu-item a:hover {
-  color: #1abc9c;
-}
-
-.header-icons {
-  display: flex;
-  align-items: center; /* Alineación vertical */
-  gap: 10px; /* Espaciado entre los elementos */
-}
-
-.header-icons .icon-image {
-  max-height: 30px;
-  transition: transform 0.3s ease;
-}
-
-.header-icons .icon-image:hover {
-  transform: scale(1.1);
-}
-
-.hero-button {
-  margin-top: 2rem;
-  text-align: center;
-}
-
-.btn {
-  background-color: #007bff; /* Color azul */
-  color: white;
-  padding: 0.8rem 1.5rem; /* Espaciado interno */
-  border-radius: 5px; /* Bordes redondeados */
-  font-size: 1rem; /* Tamaño de fuente */
-  font-weight: bold; /* Negrita */
-  text-decoration: none; /* Quitar subrayado */
-  border: 2px solid transparent; /* Borde inicial transparente */
-  cursor: pointer; /* Cursor de mano */
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Transición suave */
-}
-
-.btn:hover {
-  background-color: white; /* Fondo blanco al pasar el ratón */
-  color: #007bff; /* Texto azul al pasar el ratón */
-  border-color: #007bff; /* Cambiar el color del borde sin afectar el tamaño */
-}
-

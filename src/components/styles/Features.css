@@ -1,105 +1,106 @@
-/* Estilos generales */
-.features-section {
-  background-color: #f8f9fa;
-  /* Fondo claro */
+.features-section .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.features-section .col-md-6.image-column {
+  flex: 0 0 40%;
+  max-width: 40%;
+}
+
+.features-section .col-md-6.text-column {
+  flex: 0 0 60%;
+  max-width: 60%;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.features-section img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: 0;
+}
+
+.full-width-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 60px 20px;
-  overflow-x: hidden;
-  /* Evita el desbordamiento horizontal */
+  gap: 20px;
+}
+
+.full-width-section .text-column {
+  flex: 0 0 60%;
+  max-width: 60%;
+  text-align: left;
+}
+
+.full-width-section .image-column {
+  flex: 0 0 40%;
+  max-width: 40%;
+}
+
+
+.full-width-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+
+  .features-section .row,
+  .full-width-section {
+    flex-direction: column;
+  }
+
+  .features-section .col-md-6,
+  .full-width-section .text-column,
+  .full-width-section .image-column {
+    flex: unset;
+    max-width: 100%;
+  }
+
+  .full-width-section img {
+    margin-top: 20px;
+  }
+}
+
+.corazon {
+  max-width: 400px;
+  width:80% !important;
+  /* Limita el ancho máximo */
+  height: auto;
+  /* Mantiene la proporción */
+  object-fit: cover;
+  /* Ajusta la imagen dentro del contenedor */
 }
 
 .features-section h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  /* Aumenta el tamaño del título */
+  font-family: 'Poppins', sans-serif;
+  /* Fuente redondeada */
   color: #4a5568;
-  /* Gris azulado */
   margin-bottom: 20px;
   font-weight: 600;
-}
-
-.features-section p {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: #6b7280;
-  /* Gris intermedio */
-  margin-bottom: 20px;
-}
-
-/* Imagen con bordes suaves */
-.features-section img {
-  width: 100%;
-  max-width: 450px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin: 20px auto;
-}
-
-/* Fondo completo con imagen para la segunda parte */
-.full-width-section {
-  position: relative;
-  width: 100%;
-  /* Ocupa todo el ancho disponible */
-  background: url('/images/corazon.jpg') no-repeat center center;
-  /* Imagen de fondo */
-  background-size: cover;
-  /* Escala la imagen para cubrir toda la sección */
-  padding: 60px 20px;
-  margin: 0;
-  /* Elimina márgenes no deseados */
-  box-sizing: border-box;
-  /* Asegura que el padding no cause desbordamiento */
-  color: #ffffff;
-  /* Color de texto blanco para contraste */
-}
-
-/* Superposición de opacidad para mejorar legibilidad */
-.full-width-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.7);
-  /* Blanco con opacidad para mayor contraste */
-  z-index: 1;
-  /* Sitúa la superposición detrás del texto */
-}
-
-/* Texto extendido y centrado */
-.extended-text {
-  position: relative;
-  z-index: 2;
-  /* Asegura que el texto esté encima de la superposición */
-  max-width: 900px;
-  /* Limita el ancho del contenido */
-  margin: 0 auto;
-  /* Centrado horizontal */
   text-align: center;
 }
 
-.extended-text p {
-  font-size: 1.15rem;
-  line-height: 1.7;
-  color: #4a4a4a;
-  /* Gris oscuro */
-  margin-bottom: 15px;
+.primerbloque {
+  font-size: 1.1rem;
+  /* Aumenta el tamaño del texto */
+  font-family: 'Poppins', sans-serif;
+  /* Fuente redondeada */
+  line-height: 1.9;
+  /* Mejora el espaciado entre líneas */
+  color: #6b7280;
+  margin-bottom: 20px;
 }
 
-/* Cursiva para frases destacadas */
-.extended-text em {
-  font-style: italic;
-  color: #4a5568;
-  /* Gris azulado */
-}
-
-/* Responsive */
-@media (min-width: 768px) {
-  .features-section .row {
-    display: flex;
-    align-items: center;
-  }
-
-  .features-section .col-md-6 {
-    flex: 1;
-    padding: 20px;
-  }
+.segundobloque {
+    font-size: 1.1rem;
 }

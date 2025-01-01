@@ -1,54 +1,73 @@
 .hero {
   height: 100vh;
   display: flex;
+  justify-content: center;
+  /* Centra horizontalmente el contenido */
   align-items: center;
-  justify-content: flex-end; /* Para posicionar el texto a la derecha */
-  position: relative;
-  background: url('/images/despacho-2.JPG');
-
+  /* Centra verticalmente el contenido */
+  background-image: url("/images/despacho-2.JPG");
   background-size: cover;
   background-position: center;
   color: white;
   padding: 2rem;
+  position: relative;
 }
 
 .hero-content {
-  max-width: 50%; /* El texto ocupa la mitad derecha del espacio */
+  max-width: 75%;
+  /* El cuadro de texto ocupa el 75% del ancho */
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Fondo oscuro semitransparente */
+  padding: 1.5rem;
+  border-radius: 8px;
+  /* Opcional: bordes redondeados */
   text-align: center;
-  background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
-  padding: 3rem;
-  border-radius: 10px;
+  /* Texto centrado */
+    margin-left: 30%;
 }
 
+
 .hero-text h1 {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-  margin-top: 1rem;
 }
 
 .hero-text p {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-}
-
-.hero-button {
-  margin-top: 2rem;
-  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 .hero .btn {
-  background-color: #007bff;
-  color: white;
+  display: inline-block;
+  margin-top: 1rem;
   padding: 0.8rem 1.5rem;
-  border-radius: 5px;
-  font-weight: bold;
+  font-size: 1rem;
+  color: white;
+  background-color: #0066cc;
+  /* Color azul o el que usas en "Servicios" */
+  border: none;
+  border-radius: 4px;
+  /* Bordes redondeados */
   text-decoration: none;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 .hero .btn:hover {
-  background-color: white;
-  color: #007bff;
+  background-color: #004a99;
+  /* Color más oscuro en hover */
+}
+
+@media screen and (max-width: 768px) {
+  .hero-content {
+    max-width: 90%;
+    /* Ajusta el ancho en pantallas pequeñas */
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
 }

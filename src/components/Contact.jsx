@@ -29,7 +29,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <div className="contact-container" id="contacto">
+    <div className="contact-container" id="contact">
       <div className="contact-column contact-form">
         <h2 className="form-title">Envíanos un correo</h2>
         <form onSubmit={handleSubmit}>
