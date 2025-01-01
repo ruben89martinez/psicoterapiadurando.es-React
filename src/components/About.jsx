@@ -4,8 +4,6 @@ import "./styles/About.css";
 const About = () => {
   return (
     <section id="sobre-mi" className="about">
-      <h2>Sobre mí</h2>
-
       <div className="about-image-container">
         <img 
           src="/images/foto_perfil.jpeg" 
