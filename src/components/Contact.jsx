@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
+import emailjs from "emailjs-com";
 import "./styles/Contact.css";
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [feedbackMessage, setFeedbackMessage] = useState(""); // Mensaje de éxito/error
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -11,7 +13,38 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    window.location.href = `mailto:murciaterapeuta@gmail.com?subject=Consulta%20de%20${formData.name}&body=${formData.message}`;
+
+    // Validar campos vacíos
+    if (!formData.name || !formData.email || !formData.message) {
+      setFeedbackMessage("Por favor, completa todos los campos antes de enviar.");
+      return;
+    }
+
+    // Parámetros para enviar a EmailJS
+    const templateParams = {
+      user_name: formData.name,
+      user_email: formData.email,
+      message: formData.message,
+    };
+
+    emailjs
+      .send(
+        "service_o2cdowi", // Reemplaza con tu Service ID
+        "template_b3dacf9", // Reemplaza con tu Template ID
+        templateParams,
+        "SZSjAvPtNwzdkleEz" // Reemplaza con tu Public Key
+      )
+      .then(
+        (response) => {
+          console.log("Correo enviado exitosamente:", response.status, response.text);
+          setFeedbackMessage("¡Correo enviado correctamente! Gracias por contactarnos.");
+          setFormData({ name: "", email: "", message: "" }); // Limpia el formulario
+        },
+        (error) => {
+          console.error("Error al enviar el correo:", error);
+          setFeedbackMessage("Hubo un error al enviar el correo. Por favor, intenta de nuevo.");
+        }
+      );
   };
 
   useEffect(() => {
@@ -64,6 +97,7 @@ const Contact = () => {
           </label>
           <button type="submit">Enviar</button>
         </form>
+        {feedbackMessage && <p className="feedback-message">{feedbackMessage}</p>}
       </div>
       <div className="contact-column contact-calendar">
         <h2 className="calendar-title">Reserva tu cita con nosotros</h2>

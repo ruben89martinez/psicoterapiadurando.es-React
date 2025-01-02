@@ -91,6 +91,15 @@
   width: 100%; /* Asegurar que el calendario use el espacio disponible */
   max-width: 800px; /* Limitar el tamaño máximo del calendario */
 }
+/* Mensaje de retroalimentación */
+.feedback-message {
+  margin-top: 15px;
+  color: #007bff;
+  /* Azul para mensajes informativos */
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+}
 
 /* RESPONSIVIDAD: Cambiar a diseño de una columna en dispositivos móviles */
 @media (max-width: 768px) {
