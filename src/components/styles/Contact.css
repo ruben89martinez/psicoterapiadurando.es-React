@@ -1,14 +1,11 @@
 /* Contenedor principal con diseño de dos columnas */
 .contact-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  /* Dos columnas iguales para pantallas grandes */
+  grid-template-columns: 1fr 1fr; /* Dos columnas iguales para pantallas grandes */
   gap: 20px;
-  align-items: start;
-  /* Alinear contenido al inicio verticalmente */
+  align-items: center; /* Alinear contenido verticalmente */
   padding: 20px;
-  min-height: 100vh;
-  /* Altura mínima para ocupar toda la pantalla */
+  min-height: 100vh; /* Altura mínima para ocupar toda la pantalla */
 }
 
 /* Columnas individuales */
@@ -16,25 +13,26 @@
   padding: 20px;
   border-radius: 8px;
   background-color: #f9f9f9;
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  flex-direction: column;
 }
 
 /* Estilo para la columna del formulario */
 .contact-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  /* Alinear al inicio verticalmente */
-  align-items: flex-start;
-  /* Alinear el contenido a la izquierda en escritorio */
+  width: 100%; /* Asegurar que el formulario ocupe todo el ancho disponible */
+  max-width: 400px; /* Limitar el ancho del formulario */
+  text-align: center; /* Centrar el texto dentro del formulario */
+  margin: 0 auto; /* Asegurar que esté completamente centrado */
 }
 
+/* Título del formulario */
 .form-title {
   margin-bottom: 20px;
-  text-align: center;
   font-size: 24px;
   font-weight: bold;
-  width: 100%;
-  /* Asegurar que el título esté alineado correctamente */
+  text-align: center;
 }
 
 /* Estilo para el formulario */
@@ -42,14 +40,12 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  width: 100%;
-  max-width: 400px;
-  /* Limitar el ancho del formulario */
 }
 
 .contact-form label {
   font-weight: bold;
   margin-bottom: 5px;
+  text-align: left; /* Opcional: Alineación izquierda para etiquetas */
 }
 
 .contact-form input,
@@ -63,8 +59,7 @@
 
 .contact-form textarea {
   height: 100px;
-  resize: vertical;
-  /* Permitir redimensionar verticalmente */
+  resize: vertical; /* Permitir redimensionar verticalmente */
 }
 
 .contact-form button {
@@ -81,8 +76,7 @@
 .contact-calendar {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  /* Centrar el título y el calendario */
+  align-items: center; /* Centrar el título y el calendario */
 }
 
 .calendar-title {
@@ -94,29 +88,40 @@
 
 /* Estilo para el calendario */
 .contact-calendar .zl-url {
-  width: 100%;
-  /* Asegurar que el calendario use el espacio disponible */
-  max-width: 800px;
-  /* Limitar el tamaño máximo del calendario */
+  width: 100%; /* Asegurar que el calendario use el espacio disponible */
+  max-width: 800px; /* Limitar el tamaño máximo del calendario */
 }
 
 /* RESPONSIVIDAD: Cambiar a diseño de una columna en dispositivos móviles */
 @media (max-width: 768px) {
   .contact-container {
-    grid-template-columns: 1fr;
-    /* Una sola columna */
-    gap: 30px;
-    /* Espacio adicional entre las columnas */
+    grid-template-columns: 1fr; /* Una sola columna */
+    gap: 30px; /* Espacio adicional entre las columnas */
   }
 
-  .contact-form,
-  .contact-calendar {
-    align-items: center;
-    /* Centrar el contenido horizontalmente en móvil */
+  .contact-column {
+    align-items: center; /* Centrar contenido en móvil */
+    justify-content: center; /* Centrar contenido verticalmente en móvil */
+    padding: 10px; /* Reducir el padding en móviles */
+  }
+
+  .contact-form {
+    max-width: 300px; /* Reducir el tamaño del formulario en móviles */
   }
 
   .form-title {
-    text-align: center;
-    /* Centrar el título en móvil */
+    font-size: 20px; /* Reducir el tamaño del título en móviles */
+    margin-bottom: 15px; /* Reducir el margen inferior */
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 8px; /* Reducir el padding en móviles */
+    font-size: 14px; /* Reducir el tamaño de la fuente */
+  }
+
+  .contact-form button {
+    padding: 8px 12px; /* Botón más compacto */
+    font-size: 14px; /* Reducir el tamaño de la fuente del botón */
   }
 }
