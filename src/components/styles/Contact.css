@@ -6,6 +6,7 @@
   align-items: center; /* Alinear contenido verticalmente */
   padding: 20px;
   min-height: 100vh; /* Altura mínima para ocupar toda la pantalla */
+
 }
 
 /* Columnas individuales */
