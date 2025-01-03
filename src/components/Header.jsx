@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import "./styles/Header.css";
 
 const Header = () => {
@@ -26,12 +26,12 @@ const Header = () => {
       </button>
 
       {/* Menú estándar */}
-      <nav className="header-menu">
+      <nav className="header-menu" >
         <ul>
-          <li className="menu-item"><Link to="/">Inicio</Link></li>
-          <li className="menu-item"><Link to="/sobre-mi">Sobre mí</Link></li>
-          <li className="menu-item"><Link to="/#servicios">Servicios</Link></li>
-          <li className="menu-item"><Link to="/#contact">Contacto</Link></li>
+          <li className="menu-item"><HashLink smooth to="/#inicio">Inicio</HashLink></li>
+          <li className="menu-item"><HashLink smooth to="/sobre-mi">Sobre mí</HashLink></li>
+          <li className="menu-item"><HashLink smooth to="/#servicios">Servicios</HashLink></li>
+          <li className="menu-item"><HashLink smooth to="/#contact">Contacto</HashLink></li>
         </ul>
       </nav>
 
@@ -39,10 +39,10 @@ const Header = () => {
       {isMenuOpen && (
         <nav className="mobile-menu menu-open">
           <ul>
-            <li className="menu-item"><Link to="/" onClick={closeMenu}>Inicio</Link></li>
-            <li className="menu-item"><Link to="/sobre-mi" onClick={closeMenu}>Sobre mí</Link></li>
-            <li className="menu-item"><Link to="/#servicios" onClick={closeMenu}>Servicios</Link></li>
-            <li className="menu-item"><Link to="/#contact" onClick={closeMenu}>Contacto</Link></li>
+            <li className="menu-item"><HashLink smooth to="/#inicio" onClick={closeMenu}>Inicio</HashLink></li>
+            <li className="menu-item"><HashLink smooth to="/sobre-mi" onClick={closeMenu}>Sobre mí</HashLink></li>
+            <li className="menu-item"><HashLink smooth to="/#servicios" onClick={closeMenu}>Servicios</HashLink></li>
+            <li className="menu-item"><HashLink smooth to="/#contact" onClick={closeMenu}>Contacto</HashLink></li>
           </ul>
         </nav>
       )}

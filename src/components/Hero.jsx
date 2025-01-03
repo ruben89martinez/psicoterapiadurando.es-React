@@ -2,8 +2,8 @@ import React from "react";
 import "./styles/Hero.css";
 
 const Hero = () => (
-  <section id="hero" className="hero">
-    <div className="hero-content">
+  <section id="inicio" className="hero">
+    <div className="hero-content" >
       <div className="hero-text">
         <h1>Psicoterapia Durango</h1>
         <p>Un espacio diseñado para tu bienestar emocional.</p>
